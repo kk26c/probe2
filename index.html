@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="ttttttt.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/836377d987.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="lattu">
+        <div id="header">
+            <div class="container">
+                <img src="" alt="">
+                <nav>
+                    <img src="logo.png" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <img src="" alt="">
+                </nav>
+                <div class="header-text">
+                    <p></p>
+                    <h1>RailCargo Precision:<br> <span>Revolutionizing </span>Efficiency</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="newn.jpeg" height="70%" width="108%">
+                </div>
+                <div class="about-col-2">
+                    <img src="" alt="">
+                    <h1 class="sub-title">About Us</h1><br>
+                    <p>Welcome to Probe, where cutting-edge technology meets efficiency in railway cargo management. Our project focuses on precise weighing of coal-laden railway wagons, addressing underloading and overloading conditions. Committed to accuracy and safety, our advanced system ensures optimal performance. At Probe, we blend innovation with industry expertise, continuously refining our solution. Dedicated to excellence, we strive to meet evolving industry standards and exceed client expectations.<br>
+                        <br>
+                        <br>Join us in transforming railway cargo management, where we weigh more than wagons; we weigh the future of efficient and sustainable operations. we strive to meet evolving industry standards and exceed client expectations. Join us in transforming railway cargo management, where we weigh more than wagons; we weigh the future of efficient and sustainable operations
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Work</p>
+                        <p class="tab-links" onclick="opentab('experience')">Accuracy</p>
+                        <p class="tab-links" onclick="opentab('education')">Eco-Friendly</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Quick Response</span><br>Provides Efficient Result </li>
+                            <li><span>Scanning</span><br>Faster Overloading & Underloading Decision</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Preciseness</span><br>Loading with high accuracy </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Sustainable resources</span><br> Save resources<br></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Us</h1>
+                    <p><a href="#"><i class="fa-solid fa-envelope"></i></a>&nbsp;probe231@gmail.com</p>
+                    <p><a href="#"><i class="fa-solid fa-phone"></i></a>&nbsp;94504XXXXX</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>&nbsp;
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div><br>
+                    <a href="" class="btn btn2"> </a>
+                </div>
+                <div class="contact-right">
+                    <form name="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"> </span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><small> Copyright © Edubot. Made with ♥ </p></small>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemeu.style.right = "200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzUNY-Rbgjtq1djS56JVc-iJ2wchZ1AMPvzojw7I86qPqhB42cYDq9nq6YnahanjfFMVQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cool Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PROBE</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Our Cool Website!</h2>
+        <p>This is the home page content. You can customize it as you like.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Here you can provide information about your awesome team or company.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us through the following means:</p>
+        <p>Email: your.email@example.com</p>
+        <p>Phone: (555) 123-4567</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Cool Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
